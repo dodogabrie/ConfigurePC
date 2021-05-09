@@ -1,0 +1,26 @@
+# Data #
+numpy
+pandas
+sklearn
+tslearn
+pyts
+#######
+
+# Plots #
+matplotlib
+seaborn
+scikit-plot
+#########
+
+# Machine Learning #
+tensorflow
+keras
+####################
+
+# Utils #
+pydot
+pydotplus
+ipython
+jupyter
+librosa
+#########
