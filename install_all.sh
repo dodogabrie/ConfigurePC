@@ -3,6 +3,9 @@
 ######################################################
 # Bash script to install apps on a new system (Ubuntu)
 ######################################################
+# To run:
+#>>> chmod +x install_all.sh
+#>>> ./install_all.sh
 
 ## Update packages and Upgrade system
 sudo apt-get update -y
