@@ -61,3 +61,20 @@ sudo apt-get install jupyter -y
 
 echo 'Installing Python packages'
 pip install -r python_package.txt
+
+echo 'Jupyter Extentions'
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+
+#############
+#  General  #
+#############
+DIR="Università"
+if [! -d "$DIR" ]; then
+  # Take action if $DIR exists. #
+  echo "Create Folder ${DIR}..."
+  mkdir Università
+fi
+
+echo "###Installing .inputrc..."
+cp .inputrc $HOME
