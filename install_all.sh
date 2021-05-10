@@ -102,3 +102,8 @@ mkdir ~/.config/inkscape-shortcut-manager
 cp ink-short_config.py ~/.config/inkscape-shortcut-manager/config.py
 sudo apt-get install rxvt
 cp .Xdefaults ~/
+sed  -i '1i #!/usr/bin/python3' ~/Università/inkscape-shortcut-manager/main.py
+chmod +x ~/Università/inkscape-shortcut-manager/main.py
+sudo cp ink-on-boot /etc/init.d/
+sudo chmod ugo+x /etc/init.d/ink-on-boot
+update-rc.d ink-on-boot defaults
