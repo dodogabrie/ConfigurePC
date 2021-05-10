@@ -85,3 +85,20 @@ else
   echo "Update ${DIR}..."
   cat .inputrc >> $HOME/.inputrc
 fi
+
+echo "Install vlc fom snap"
+sudo snap install vlc
+echo "Install inkscape fom snap"
+sudo snap install inkscape
+
+##############################################
+#  Lecturenotes (inkscape-shortcut-manager)  #
+##############################################
+sudo apt-get install pdf2svg -y
+sudo apt-get install xclip -y
+sudo apt-get install rofi -y
+git clone https://github.com/gillescastel/inkscape-shortcut-manager.git ~/Università/
+mkdir ~/.config/inkscape-shortcut-manager
+cp ink-short_config.py ~/.config/inkscape-shortcut-manager/config.py
+sudo apt-get install rxvt
+cp .Xdefaults ~/
