@@ -1,0 +1,8 @@
+###################################
+#  .inputrc of Edoardo Gabrielli  #
+###################################
+# Find the characters for sequences of input (like SHIFT-TAB): open cat, run CTRL-V (to find escape sequence) then press the sequence. 
+# The characters after '^[' are what you are looking for.
+
+# With SHIFT + TAB set autocomplete like vim.
+"\e[Z": menu-complete
