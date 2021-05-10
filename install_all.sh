@@ -10,12 +10,6 @@
 ## Update packages and Upgrade system
 sudo apt-get update -y
 
-#########
-#  Git  #
-#########
-echo '###Installing Git..'
-sudo apt-get install git -y
-
 # Git Configuration
 echo '###Congigure Git..'
 
@@ -26,6 +20,12 @@ git config --global user.name "${GITUSER}"
 echo "Enter the Global Email for Git:";
 read GITEMAIL;
 git config --global user.email "${GITEMAIL}"
+
+#########
+#  Git  #
+#########
+echo '###Installing Git..'
+sudo apt-get install git -y
 
 echo 'Git has been configured!'
 git config --list
@@ -76,5 +76,12 @@ if [! -d "$DIR" ]; then
   mkdir Università
 fi
 
-echo "###Installing .inputrc..."
-cp .inputrc $HOME
+DIR="$HOME/.inputrc"
+if [! -d "$DIR" ]; then
+  # Take action if $DIR exists. #
+  echo "Create ${DIR}..."
+  cp .inputrc $HOME
+else
+  echo "Update ${DIR}..."
+  cat .inputrc >> $HOME/.inputrc
+fi
