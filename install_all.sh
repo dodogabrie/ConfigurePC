@@ -80,10 +80,10 @@ DIR="$HOME/.inputrc"
 if [! -d "$DIR" ]; then
   # Take action if $DIR exists. #
   echo "Create ${DIR}..."
-  cp .inputrc $HOME
+  cp ~/ConfigurePC/.inputrc $HOME
 else
   echo "Update ${DIR}..."
-  cat .inputrc >> $HOME/.inputrc
+  cat ~/ConfigurePC/.inputrc >> $HOME/.inputrc
 fi
 
 echo "Install vlc fom snap"
@@ -104,6 +104,4 @@ sudo apt-get install rxvt
 cp .Xdefaults ~/
 sed  -i '1i #!/usr/bin/python3' ~/Università/inkscape-shortcut-manager/main.py
 chmod +x ~/Università/inkscape-shortcut-manager/main.py
-sudo cp ink-on-boot /etc/init.d/
-sudo chmod ugo+x /etc/init.d/ink-on-boot
-update-rc.d ink-on-boot defaults
+cat ConfigurePC/to_bashrc >> ~/.bashrc
